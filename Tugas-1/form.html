@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+</head>
+
+<body>
+    <h1>Buat Akun Baru!</h1>
+    <h3>Sign Up Form</h3>
+
+    <form action="welcome.html">
+        <div>
+            <label for="nama">First name:</label>
+            <br>
+            <input type="text" id="nama">
+        </div>
+        <br>
+        <div>
+            <label for="nama">Last name:</label>
+            <br>
+            <input type="text" id="nama">
+        </div>
+        <div>
+            <p>Gender:</p>
+            <input type="radio" name="gender" id="male"> <label for="male">Male</label> <br>
+            <input type="radio" name="gender" id="female"> <label for="female">Female</label> <br>
+            <input type="radio" name="gender" id="other"> <label for="other">Other</label> <br>
+        </div>
+        <div>
+            <label for="national">Nationality: </label>
+            <br>
+            <select name="national" id="national">
+                <option value="Indonesia">Indonesia</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="Singapure">Singapure</option>
+            </select>
+        </div>
+
+        <div>
+            <p>Languge Spoken:</p>
+            <input type="checkbox" name="bahasa" id="indo"> <label for="indo">Indonesia</label> <br>
+            <input type="checkbox" name="bahasa" id="eng"> <label for="eng">English</label>
+            <br>
+            <input type="checkbox" name="bahasa" id="other"> <label for="other">Other</label>
+            <br>
+        </div>
+
+        <div>
+            <label for="bio">Bio:</label>
+            <br>
+            <textarea name="bio" id="bio" rows="10"></textarea>
+        </div>
+
+        <button type="submit">Sign up</button>
+
+
+    </form>
+</body>
+
+</html>
