@@ -5,65 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Array</title>
+    <title>Looping</title>
 </head>
 
 <body>
-    <h1>Berlatih Array</h1>
-    <h3>Looping Array</h3>
-    <div id="jawaban1"></div>
+    <h1>Berlatih Looping</h1>
+    <h3>Contoh Hasil Looping</h3>
+    <div id="example">
+    </div>
+    <h3>Soal No. 1</h3>
+    <div id="jawaban1">
+    </div>
     <script>
-        /* SOAL NO. 1 LOOPING PADA ARRAY
-        Buatlah sebuah fungsi dengan nama dataHandling() dengan sebuah parameter untuk menerima argumen. Argumen yang akan diterima
-        
-        adalah sebuah array yang berisi beberapa array sejumlah n. Contoh input dapat dilihat dibawah: var input = [
-        ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"], ["0002", "Dika Sembiring", "Medan", "10/10/1992", "Bermain Gitar"], ["0003", "Winona", "Ambon", "25/12/1965", "Memasak"], ["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"]
-        ]
-        Tugas kamu adalah mengimplementasikan fungsi dataHandling agar dapat menampilkan data-data pada dari argumen seperti di bawah ini: Nomor ID: 0001
-        Nama Lengkap: Roman Alamsyah
-        TTL: Bandar Lampung 21/05/1989
-        Hobi: Membaca Nomor ID: 0002
-        Nama Lengkap: Dika Sembiring
-        TTL: Medan 10/10/1992
-        Hobi: Bermain Gitar Nomor ID: 0003
-        Nama Lengkap: Winona
-        TTL: Ambon 25/12/1965
-        Hobi: Memasak
-        Nomor ID: 0004
-        Nama Lengkap: Bintang Senjaya
-        TTL: Martapura 6/4/1970
-        Hobi: Berkebun
-        */
-        var input = [
-            ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"], ["0002", "Dika Sembiring", "Medan", "10/10/1992", "Bermain Gitar"], ["0003", "Winona", "Ambon", "25/12/1965", "Memasak"],
-            ["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"]
-        ]
-
-        // Code kamu di sini, lakukan looping terhadap input di atas 
-        var jawaban1 = dataHandling(input) // = Isikan outputnya di sini
-
-
-        function dataHandling(input) {
-            let output = '';
-
-            for (let i = 0; i < input.length; i++) {
-                output += "<br>Nomor ID: " + input[i][0] + "<br>";
-                output += "Nama Lengkap: " + input[i][1] + "<br>";
-                output += "TTL: " + input[i][2] + " " + input[i][3] + "<br>";
-                output += "Hobi: " + input[i][4] + "<br>";
-
-                // Tambahkan baris kosong antara entri, kecuali untuk yang terakhir
-                if (i < input.length - 1) {
-                    output += "\n";
-                }
-            }
-
-            return output;
+        // Contoh untuk melakukan looping dengan for 
+        var jawabanContoh = ""
+        for (var i = 0; i < 5; i++) {
+            jawabanContoh += "ini adalah angka ke: " + [i] + "<br>"
         }
-
-
-        document.getElementById("jawaban1").innerHTML = jawaban1
-    </script>
+        // Driver Code
+        document.getElementById("example").innerHTML = jawabanContoh
+        // Soal No. 1 Looping menggunakan While
+        /*
+        
+        Pada tugas ini kamu diminta untuk melakukan looping dalam JavaScript dengan menggunakan syntax while. Untuk membuat tantangan ini
+        lebih menarik,kamu juga diminta untuk membuat suatu looping yang menghitung maju dan menghitung mundur. OUTPUT : LOOPING PERTAMA
+        2 - I love coding
+        4 - I love coding
+        6 - I love coding
+        8 - I love coding
+        10 - I love coding
+        12 - I love coding
+        14 - I love coding
+        16 - I love coding
+        18 - I love coding
+        20 - I love coding
+        LOOPING KEDUA
+        20 - I will become web developer
+        18 - I will become web developer
+        16 - I will become web developer
+        14 - I will become web developer
+        12 - I will become web developer
+        10 - I will become web developer 8 - I will become web developer 6 - I will become web developer 4 - I will become web developer 2 - I will become web developer */
+        var jawaban1 = ""
+        jawaban1 += "LOOPING PERTAMA"
+        for (var i = 2; i <= 20; i += 2) {
+            jawaban1 += "<br>" + i + " - I love coding"
+        }
+        jawaban1 += "<br>LOOPING KEDUA"
+        for (var i = 20; i >= 2; i -= 2) {
+            jawaban1 += "<br>" + i + " - I love coding"
+        }
+        // Code kamu di sini, lakukan looping dengan while
+        // Driver Code, Jangan diganggu !
+        document.getElementById("jawaban1").innerHTML = jawaban1 </script>
 </body>
 
 </html>
