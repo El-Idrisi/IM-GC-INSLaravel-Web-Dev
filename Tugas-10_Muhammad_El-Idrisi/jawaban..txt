@@ -1,0 +1,67 @@
+1. Buat Database
+CREATE DATABASE myshop;
+
+2. Membuat Tabel di Dalam Database
+a. Membuat Tabel users
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255)
+);
+
+b. Membuat Tabel categories
+CREATE DATABASE categories (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255)
+);
+
+c. Membuat Tabel items 
+CREATE DATABASE items (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255),
+    description VARCHAR(255),
+    price INTEGER,
+    stock INTEGER,
+    categories_id INTEGER,
+    FOREIGN KEY (categories_id) REFERENCES categories(id)
+);
+
+3. Memasukkan Data pada Table
+a. Memasukan Data pada Table users
+    INSERT INTO users (name, email, password) VALUES 
+    ("Jhon Doe", "jhon@doe.com", "123",),
+    ("Jane Doe", "jane@doe.com", "456",);
+
+b. Memasukan Data pada Table categories
+    INSERT INTO categories (name) VALUES
+    ("gadget"),
+    ("cloth"),
+    ("men"),
+    ("women"),
+    ("branded");
+
+c. Memasukan Data pada Table items
+    INSERT INTO items (name, description, price, stock, categories_id) VALUES
+    ("Samsung b50", "hape keren dari merek Samsung", 1000000, 50, 1),
+    ("Uniklooh", "baju keren dari brand ternama", 500000, 25, 2),
+    ("IMHO Watch", "jam tangan anak yang jujur banget", 500000, 25, 3);
+
+4. Mengambil Data dari Database
+a. Mengambil Data users
+    SELECT id, name, email FROM users;
+
+b. Mengambil Data items
+    - Mendapatkan item dengan harga di atas 1.000.000
+    SELECT * FROM items WHERE price > 1000000;
+
+    - Mendapatkan item dengan nama mirip dengan "uniklo", "watch", atau "sang"
+    SELECT * FROM items WHERE name LIKE '%uniklo%';
+
+c. Menampilkan Data Items Join Dengan Kategori
+    SELECT items.name, items.description, categories.name AS category_name
+    FROM items
+    JOIN categories ON items.category_id = categories.id;
+
+5. Mengubah Data dari Database
+    UPDATE items SET price = 2500000 WHERE name = 'Sumsang b50';
